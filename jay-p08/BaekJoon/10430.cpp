@@ -4,24 +4,13 @@ using namespace std;
 
 int main()
 {
-    int Fee, Number;
-    cin >> Fee >> Number;
+    int A, B, C;
+    cin >> A >> B >> C;
 
-    for ( size_t i = 0 ; i < Number; i++ )
-    {
-        int Price, Count;
-        cin >> Price >> Count;
-        Fee -= Price * Count;
-    } // for()
-
-    if( Fee == 0 )
-    {
-        cout << "Yes";
-    } // if()
-    else
-    {
-        cout << "No";
-    } // else()
+    cout << ( A + B ) % C << endl;
+    cout << ( ( A % C ) + ( B % C ) ) % C << endl;
+    cout << ( A * B ) % C << endl;
+    cout << ( ( A % C ) * ( B % C ) ) % C << endl;
 
     return 0;
 } // main()
