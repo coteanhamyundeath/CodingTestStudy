@@ -2,7 +2,7 @@ package yourim08;
 
 import java.util.Scanner;
 
-public class Divide {
+public class 채점현황 {
     public static void main(String args[]) {
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();
