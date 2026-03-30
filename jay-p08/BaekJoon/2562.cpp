@@ -1,7 +1,5 @@
 #include <iostream>
-#include <algorithm>
 #include <climits>
-#include <vector>
 
 using namespace std;
 
@@ -11,17 +9,21 @@ int main()
     ios::sync_with_stdio( false );
 
     int A;
-    vector<int> Vector;
+    int Max = INT_MIN;
+    int Index = 0;
 
-    for ( size_t i = 0 ; i < 9 ; i++ )
+    for ( int i = 0 ; i < 9 ; i++ )
     {
         cin >> A;
 
-        Vector.push_back( A );
+        if ( A > Max )
+        {
+            Max = A;
+            Index = i + 1;
+        } // if()
     } // for()
 
-    cout << *max_element( Vector.begin(), Vector.end() ) << "\n"
-         << max_element( Vector.begin(), Vector.end() ) - Vector.begin() + 1;
+    cout << Max << "\n" << Index;
 
     return 0;
 } // main()
