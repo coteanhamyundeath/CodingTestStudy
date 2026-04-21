@@ -1,14 +1,12 @@
 function solution(n, k) {
     var answer = 0;
 
-    let remains = [];
+    let k_num = "";
     let num = n;
     while (num > 0) {
-        remains.push(num % k);
+        k_num = (num % k) + k_num;
         num = Math.floor(num / k);
     }
-
-    const k_num = remains.reverse().join("");
 
     const k_num_list = k_num.split("0").filter(x => x !== "");
 
